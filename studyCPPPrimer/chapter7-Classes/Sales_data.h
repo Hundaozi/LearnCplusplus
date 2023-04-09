@@ -1,25 +1,28 @@
 
 #include<iostream>
-struct Sales_data
+class Sales_data
 {
-    /* data */
-    Sales_data()=default; //默认构造函数
+    public:
+        /* data */
+        Sales_data()=default; //默认构造函数
 
-    Sales_data(const std::string &s):bookNo(s){}
+        Sales_data(const std::string &s):bookNo(s){}
 
-    Sales_data(const std::string &s, unsigned n, double p):
-        bookNo(s), units_sold(n), revenue(p*n) {}
+        Sales_data(const std::string &s, unsigned n, double p):
+            bookNo(s), units_sold(n), revenue(p*n) {}
     
-    Sales_data(std::istream &);
-    //其他成员函数
-
+        Sales_data(std::istream &);
+        //其他成员函数
+    
     std::string isbn() const  { return bookNo;}
     Sales_data& combine(const Sales_data&);
-    double avg_price() const;
 
-    std::string bookNo;
-    unsigned units_sold = 0;
-    double revenue =0.0;
+    private:
+
+        double avg_price() const;
+        std::string bookNo;
+        unsigned units_sold = 0;
+        double revenue =0.0;
 };
 
 Sales_data add(const Sales_data&, const Sales_data&);
