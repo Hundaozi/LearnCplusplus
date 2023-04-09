@@ -1,10 +1,16 @@
-#include "Sales.h"
+#include "Sales_data.h"
+#include "Screen.h"
 
 int main()
 {
-    Screen myScreen;
-    Screen temp=myScreen.move(4,0);
-    temp.set('#');
+    Screen myScreen(5,3);
+    
+    const Screen blank(5,3);
+
+    myScreen.set('#');
+    myScreen.display(std::cout);
+
+    blank.display(std::cout);
 
 
     return 0;

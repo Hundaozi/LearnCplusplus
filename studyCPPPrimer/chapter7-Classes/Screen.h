@@ -1,37 +1,5 @@
-
 #include<iostream>
-#include<vector>
-class Sales_data
-{
-    //友元函数
-    friend Sales_data add(const Sales_data&, const Sales_data&);
-    friend std::ostream &print(std::ostream&, const Sales_data&);
-    friend std::istream &read(std::istream, Sales_data&);
-
-    
-    public:
-        /* data */
-        Sales_data()=default; //默认构造函数
-
-        Sales_data(const std::string &s):bookNo(s){}
-
-        Sales_data(const std::string &s, unsigned n, double p):
-            bookNo(s), units_sold(n), revenue(p*n) {}
-    
-        Sales_data(std::istream &);
-        //其他成员函数
-    
-    std::string isbn() const  { return bookNo;}
-    Sales_data& combine(const Sales_data&);
-
-    private:
-
-        double avg_price() const;
-        std::string bookNo;
-        unsigned units_sold = 0;
-        double revenue =0.0;
-};
-
+#include<string>
 class Screen{
 
     public:
@@ -69,6 +37,17 @@ class Screen{
         // inline char get(pos ht, pos wd) const;  //显式内联函数
 
         void some_member() const;
+
+        Screen &display(std::ostream &os)
+        {
+            do_display(os);
+            return *this;
+        }
+        const Screen &display(std::ostream &os) const
+        {
+            do_display(os);
+            return *this;
+        }
         
    
 
@@ -82,15 +61,14 @@ class Screen{
         mutable size_t access_ctr;  
 
         //size_t用来存储长度
+        
+
+        //显示函数，将内容输出到显示上
+        void do_display(std::ostream &os) const{
+            os<<contents;
+        }
 
     
-};
-
-//Window_mgr类的声明
-class Window_mgr{
-
-    private:
-        std::vector<Screen> screens{Screen(24, 80, ' ')};
 };
 
 //get的定义
@@ -109,11 +87,4 @@ void Screen::some_member() const
 {
     ++access_ctr;
 }
-
-
-
-
-
-
-
 
