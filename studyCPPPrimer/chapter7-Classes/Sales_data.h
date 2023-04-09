@@ -13,15 +13,19 @@ class Sales_data
 
     
     public:
-        /* data */
-        Sales_data()=default; //默认构造函数
+        
+        Sales_data()=default;
 
-        Sales_data(const std::string &s):bookNo(s){}
+        
 
         Sales_data(const std::string &s, unsigned n, double p):
             bookNo(s), units_sold(n), revenue(p*n) {}
+
+        //告诉编译器按照实际的类型来构造函数，不允许做隐式转换
+        //只能在声明时候使用
+        explicit Sales_data(const std::string &s):bookNo(s){}
     
-        Sales_data(std::istream &);
+        explicit Sales_data(std::istream &);
         //其他成员函数
     
     std::string isbn() const  { return bookNo;}
