@@ -1,6 +1,13 @@
 #include<iostream>
 #include<string>
+#include "Window_mgr.h"
+
+// extern std::ostream& storeOn(std::ostream & ,Screen &);
+// extern BitMap& storeOn(Bitmap &, Screen &);
 class Screen{
+
+    friend std::ostream& storeOn(std::ostream & , Screen &);
+    friend class Window_mgr;
 
     public:
         //类型别名
