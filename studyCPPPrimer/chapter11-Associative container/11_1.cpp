@@ -12,6 +12,12 @@ int main(){
                           "the","but","and","or","an","a"
     };
 
+    map<string,string> authors={
+        {"Joyce","James"},
+        {"Austen","Jane"},
+        {"Dickens","Charles"}
+    };
+
     string word;
 
     while(cin>>word)
