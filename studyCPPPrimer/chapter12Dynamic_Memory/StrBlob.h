@@ -3,6 +3,7 @@
 #include<vector>
 #include<memory>
 #include<string>
+#include<stdexcept>
 
 class StrBlob{
     public:
@@ -37,7 +38,7 @@ class StrBlob{
     void StrBlob::check(size_type i, const std::string &msg) const
     {
         if(i>=data->size())
-            throw out_of_range(msg);
+            throw std::out_of_range(msg);
     }
 
     std::string& StrBlob::front()
