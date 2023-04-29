@@ -4,8 +4,11 @@
 #include<memory>
 #include<string>
 #include<stdexcept>
-
+class StrBlobPtr;
 class StrBlob{
+
+    friend class StrBlobPtr; //将指针类定义为友元函数
+
     public:
         //自定义类型
         typedef std::vector<std::vector<std::string>>::size_type size_type;
@@ -27,6 +30,15 @@ class StrBlob{
 
         std::string& front();
         std::string& back();
+
+        StrBlobPtr begin(){
+            return StrBlobPtr(*this);
+        };
+
+        StrBlobPtr end(){
+            auto ret = StrBlobPtr(*this,data->size());
+            return ret;
+        };
 
     private:
     //智能指针 data

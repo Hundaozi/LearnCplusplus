@@ -35,6 +35,21 @@ class StrBlobPtr{
         return ret;
     }
 
+    //间接引用
+    std::string& StrBlobPtr::deref() const
+    {
+        auto p= check(curr, "dereference past end");
+        return (*p)[curr];
+    }
+
+    //位置增加
+    StrBlobPtr& StrBlobPtr::incr()
+    {
+        check(curr, "increment past end of StrBlobPtr");
+        ++curr;
+        return *this;
+    }
+
 };
 
 
