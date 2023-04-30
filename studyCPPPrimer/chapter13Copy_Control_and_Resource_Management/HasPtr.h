@@ -45,6 +45,12 @@ class HasPtr{
         return *this;
             
     }
+
+    HasPtr& HasPtr::operator=(HasPtr rhs)
+    {
+        swap(*this, rhs);
+        return *this;
+    }
 };
 //交换函数
 inline
