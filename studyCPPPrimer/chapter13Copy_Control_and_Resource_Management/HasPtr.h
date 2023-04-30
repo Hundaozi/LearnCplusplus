@@ -4,6 +4,7 @@
 
 class HasPtr{
 
+    friend void swap(HasPtr&, HasPtr&);
     public:
 
         HasPtr(const std::string &s = std::string()):
@@ -45,8 +46,14 @@ class HasPtr{
             
     }
 };
-
-
+//交换函数
+inline
+void swap(HasPtr& lhs, HasPtr &rhs)
+{
+    using std::swap;
+    swap(lhs.ps, rhs.ps);
+    swap(lhs.i, rhs.i);
+}
 
 
 
