@@ -83,6 +83,28 @@ class StrVec{
         return *this;         //返回到当前函数
     }
     
+    //再分配函数
+    void StrVec::reallocate()
+    {   
+        //分配空间两次 作为许多项当前的大小
+        auto newcapacity= size() ? 2 * size() :1;
+        //分配新的内存
+        auto newdata =alloc.allocate(newcapacity);
+
+
+        auto dest=newdata;       //在新数组中指向下一个释放的位置
+        auto elem =elements;     //在老的数组中指向下一个项
+        
+        for(size_t i=0; i != size();++i)
+            alloc.construct(dest++, std::move(*elem++));
+
+        free();             //释放空间
+        elements=newdata;   //新数据给项
+
+        first_free=dest;    
+
+        cap=elements+newcapacity;  //新的容量为项数+新容量部分
+    }
     
 
 
