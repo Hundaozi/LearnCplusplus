@@ -43,15 +43,48 @@ class StrVec{
 
         std::string *elements;  //指向数组中第一个项的指针
 
-        std::string *first_free;  //指向数组中第一个项的指针
+        std::string *first_free;  //特制 指向数组中第一个项的指针
 
         std::string *cap;      //指向数组末尾后面的一个指针
+    
+    void StrVec::push_back(const std::string &s)
+    {
+        chk_n_alloc();
+        //为了使用原始的内存，我们必须调用 construct，which will construct an object in that memory
+        alloc.construct(first_free++, s); //第二个参数是要去到的位置
+    }
+
+    //当我们复制或者分配一个StrVec时候我们使用这个分配复制函数
+
+    std::pair<std::string*, std::string *>
+    StrVec::alloc_n_copy(const std::string*b, const std::string*e)
+    {
+        auto data=alloc.allocate(e -b);
+
+        return { data, uninitialized_copy( b ,e , data)};
+    }
+    
+    
+    
+
 
 };
 
 
+#include <algorithm>
 
 
+//释放函数
+inline
+void StrVec::free()
+{
+    if(elements){
+
+        for( auto p=first_free; p!=elements; ) 
+            alloc.destroy(--p);                 //销毁数组中的项
+            alloc.deallocate(elements, cap-elements);   //解除分配,释放内存
+    }
+}
 
 
 
