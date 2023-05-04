@@ -63,7 +63,25 @@ class StrVec{
 
         return { data, uninitialized_copy( b ,e , data)};
     }
+
+    StrVec::StrVec(const StrVec&s)
+    {
+        auto newdata= alloc_n_copy(s.begin(), s.end()); //alloc_n_copy是一个pair
+        elements=newdata.first;
+        first_free=cap=newdata.second;
+    }
     
+    StrVec::~StrVec(){ free();}    //析构函数，调用释放函数
+
+    StrVec &StrVec::operator=(const StrVec &rhs)
+    {
+        auto data=alloc_n_copy(rhs.begin(),rhs.end());
+
+        free();
+        elements=data.first;
+        first_free=cap=data.second;
+        return *this;         //返回到当前函数
+    }
     
     
 
