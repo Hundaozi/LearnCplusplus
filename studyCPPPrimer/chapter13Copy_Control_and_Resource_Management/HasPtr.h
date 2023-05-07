@@ -15,6 +15,12 @@ class HasPtr{
 
         HasPtr& operator=(const HasPtr&);
 
+        //移动构造函数
+        HasPtr(HasPtr &&p) noexcept: ps(p.ps), i(p.i) { p.ps = 0;}
+
+        //分配操作符是一个移动和复制分配操作符
+        HasPtr& operator=(HasPtr rhs){ swap(*this, rhs); return *this;}
+
         ~HasPtr(){ delete ps; }       //析构函数
     
     private:
