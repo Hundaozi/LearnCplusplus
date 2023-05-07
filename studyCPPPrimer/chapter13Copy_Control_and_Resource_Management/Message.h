@@ -30,6 +30,8 @@ class Message{
 
         void remove_from_Folders();           //从文件夹删除
 
+        void move_Folders();           //移动文件
+
     void Message::save(Folder &f)
     {   
         folders.insert(&f);     //保存指针
@@ -51,6 +53,17 @@ class Message{
     {
         for(auto f : folders)
             f->remMsg(this);      //从文件夹中江这个Message 移除
+    }
+    //移动文件
+    void Message::move_Folders(Message *m)
+    {
+        folders = std::move(m->folders);   //将m的对象移动给folders
+
+        for(auto f : folders){
+            f->remMsg(m);          //从Folder中移除老的Message
+            f->addMsg(this);       //add一个Message给那个Folder
+        }
+        m->folders.clear();        //确保销毁掉m是无害的
     }
 
     //交换函数
@@ -98,6 +111,22 @@ Message& Message::operator=(const Message &rhs)
     return *this;
 }
 
+// Message& Message::operator=(Message &&rhs)
+// {
+//     if(this != &rhs){
+//         remove_from_Folders();
+//         contents = std::move(rhs.contents);
+//         move_Folders(&rhs);
+//     }
+//     return *this;
+// }
+
+// //移动内容
+// Message::Message(Message &&m) : contents(std::move(m.contents))
+// {
+//     move_Folders(&m);
+// }
+
 
 class Folder{
 
@@ -126,6 +155,8 @@ class Folder{
         void remove_from_Msgs();
         void addMsg(Message *m) { msgs.insert(m);}
         void remMsg(Message *m) { msgs.erase(m);}
+
+    
 
 
 };
