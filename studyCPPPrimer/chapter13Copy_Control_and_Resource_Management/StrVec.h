@@ -93,7 +93,7 @@ class StrVec{
 
 
         auto dest=newdata;       //在新数组中指向下一个释放的位置
-        auto elem =elements;     //在老的数组中指向下一个项
+        auto elem =elements;     //elem是在老数组中指向一个项
         
         for(size_t i=0; i != size();++i)
             alloc.construct(dest++, std::move(*elem++));
