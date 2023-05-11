@@ -15,7 +15,7 @@ class PrintString{
     private:
         std::ostream &os;
         char sep;
-}
+};
 
 
 
