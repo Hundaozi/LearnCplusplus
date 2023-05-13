@@ -37,6 +37,22 @@ class Bulk_quote : public Quote{
         if(cnt >= min_qty)
             return cnt * (1 - discount) * price;
         else
-            return cnt * preice;
+            return cnt * price;
     }
-}
+};
+
+class Disc_quote: public Quote{
+    public:
+
+        Disc_quote()=default; //默认构造函数
+
+        Disc_quote(const std::string& book, double price, std::size_t qty, double disc):
+                                    Quote(book, price), quantity(qty), discount(disc){}
+
+
+    private:
+
+        std::size_t quantity=0;
+
+        double discount=0.0;
+};
