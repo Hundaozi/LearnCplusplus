@@ -1,4 +1,6 @@
 #include<string>
+#include<memory>
+#include<set>
 //基类
 class Quote{
     public:
@@ -55,4 +57,23 @@ class Disc_quote: public Quote{
         std::size_t quantity=0;
 
         double discount=0.0;
+};
+
+class Basket{
+    public:
+        //使用智能指针添加项
+        void add_item(const std::shared_ptr<Quote> &sale){
+            items.insert(sale);
+        }
+
+        double total_receipt(std::ostream&) const;
+
+    private:
+
+        static bool compare(const std::shared_ptr<Quote> &lhs,
+                            const std::shared_ptr<Quote> &rhs){
+                                return lhs->isbn() < rhs->isbn();
+                            }
+
+        std::multiset<std::shared_ptr<Quote>, decltype(compare)*> items{compare};
 };
