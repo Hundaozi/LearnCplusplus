@@ -2,6 +2,7 @@
 #include<string>
 #include "Query_base.h"
 
+
 class Query{
 
     friend Query operator~(const Query &);
@@ -19,3 +20,6 @@ class Query{
 
         std::shared_ptr<Query_base> q;
 };
+
+inline
+Query::Query(const std::string &s) :q(new WordQuery(s)){}
