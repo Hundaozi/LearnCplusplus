@@ -1,7 +1,11 @@
-#include<string>
-#include<memory>
-#include<set>
-#include<iostream>
+#ifndef QUOTE_H
+#define QUOTE_H
+
+#include <memory>
+#include <iostream>
+#include <string>
+#include <cstddef>
+#include <set>
 //基类
 class Quote{
     public:
@@ -14,6 +18,10 @@ class Quote{
         virtual double net_price(std::size_t n) const{ return n * price;}
 
         virtual ~Quote()=default;
+
+        virtual Quote* clone() const &{ return new Quote(*this);}
+
+        virtual Quote* clone() && { return new Quote(std::move(*this));}
     
     private:
         std::string bookNo;
@@ -30,6 +38,12 @@ class Bulk_quote : public Quote{
 
 
         double net_price(std::size_t) const override;
+
+        Bulk_quote* clone() const & { return new Bulk_quote(*this); } //左值
+        Bulk_quote* clone() &&
+                    {
+                        return new Bulk_quote(std::move(*this));//右值引用
+                    }
 
     private:
         std::size_t min_qty=0;
@@ -69,6 +83,14 @@ class Basket{
 
         double total_receipt(std::ostream&) const;
 
+        void add_item(const Quote& sale){
+            items.insert(std::shared_ptr<Quote>(sale.clone()));
+        }
+
+        void add_item(Quote&& sale){
+            items.insert(std::shared_ptr<Quote>(std::move(sale).clone()));
+        }
+
     private:
 
         static bool compare(const std::shared_ptr<Quote> &lhs,
@@ -92,3 +114,5 @@ class Basket{
         return sum;
     }
 };
+
+#endif
