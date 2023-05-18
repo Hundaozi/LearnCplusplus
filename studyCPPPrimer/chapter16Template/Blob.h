@@ -29,4 +29,11 @@ template <typename T> class Blob{
         std::shared_ptr<std::vector<T>> data; //智能指针
 
         void check(size_type i, const std::string &msg) const;
+};
+
+template <typename T>
+void Blob<T>::check(size_type i, const std::string &msg) const
+{
+    if(i>=data->size())//如果超过最大容量，则丢出一个错误
+        throw std::out_of_range(msg);
 }
