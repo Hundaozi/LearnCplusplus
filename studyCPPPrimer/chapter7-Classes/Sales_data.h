@@ -4,12 +4,18 @@
 
 #include <string>
 #include <iostream>
+#include "../chapter16Template/hash.h"
+
+template <class T> class std::hash;
+
 class Sales_data
 {
     //友元函数
     friend Sales_data add(const Sales_data&, const Sales_data&);
     friend std::ostream &print(std::ostream&, const Sales_data&);
     friend std::istream &read(std::istream, Sales_data&);
+
+    friend class std::hash<Sales_data>;
 
     
     public:
