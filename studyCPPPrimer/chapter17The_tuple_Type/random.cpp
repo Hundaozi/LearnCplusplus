@@ -41,6 +41,8 @@ void func()
             std::cout<<" seeded differs at oteration: "<< i <<std::endl;
     }
 }
+
+
 int main(){
 
     // std::vector<unsigned> v1(bad_randVec());
@@ -52,6 +54,6 @@ int main(){
     // std::vector<unsigned> v4(good_randVec());
 
     // std::cout<<((v3==v4)? "equal " : " not equal ") <<std::endl;
-    func();
+ 
     return 0;
 }
