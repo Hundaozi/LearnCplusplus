@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/studyCPPPrimer/chapter12Dynamic_Memory",
-                "${workspaceFolder}/数据结构与算法/线性表"
+                "${workspaceFolder}/数据结构与算法/1线性表"
             ],
             "defines": [
                 "_DEBUG",
