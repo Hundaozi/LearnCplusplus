@@ -2,7 +2,7 @@
 #include<string>
 //线性表的抽象类
 template<class T>
-class linerList
+class linearList
 {
     public:
 
