@@ -1,0 +1,3 @@
+/home/hundaozi/github/LearnCplusplus/cmake/build/CMakeFiles/app.dir
+/home/hundaozi/github/LearnCplusplus/cmake/build/CMakeFiles/edit_cache.dir
+/home/hundaozi/github/LearnCplusplus/cmake/build/CMakeFiles/rebuild_cache.dir
