@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "/home/hundaozi/github/LearnCplusplus/cmake/app_out/bin/app"
+  "/home/hundaozi/github/LearnCplusplus/cmake/app_out/bin/app.pdb"
   "CMakeFiles/app.dir/add.c.o"
   "CMakeFiles/app.dir/add.c.o.d"
   "CMakeFiles/app.dir/div.c.o"
@@ -9,8 +11,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/app.dir/mult.c.o.d"
   "CMakeFiles/app.dir/sub.c.o"
   "CMakeFiles/app.dir/sub.c.o.d"
-  "app"
-  "app.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
