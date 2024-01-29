@@ -6,13 +6,20 @@ project (thread_pool)
 
 #编译器选项，设置版本
 add_compile_options(
-    -std=c++17
+    -std=c++14
     -D_DEBUG
     -g
 )
 
-set(HEADERS  myinclude/safeQueue.h myinclude/thread_pool.h)
+
+include_directories (
+	myinclude/
+)
+
+set(HEADERS myinclude/safeQueue.h myinclude/thread_pool.h)
+ 
 set(SOURCES mycpp/main.cpp)
+
 SET(CMAKE_CXX_FLAGS -pthread)
 
 # main.cpp
