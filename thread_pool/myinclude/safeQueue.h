@@ -26,6 +26,7 @@ class safeQueue{
 
         //判断任务队列是否为空
         bool empty(){
+            //unique_lock 的成员函数 lock() 上锁后，在对象析构的时候会自动解锁
             std::unique_lock<std:mutex> lock(my_mutex);
             return my_queue.empty();
         }
