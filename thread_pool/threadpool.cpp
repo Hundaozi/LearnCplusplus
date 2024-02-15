@@ -66,7 +66,8 @@ public:
 
 
     template<typename F, typename... Args>
-    void enqueue(F&& f, Args&&... args) {
+    decltype(auto) //自动返回值类型推导
+    enqueue(F&& f, Args&&... args) {
         std::function<void()> task(std::bind(std::forward<F>(f), std::forward<Args>(args)...));
         {
             std::unique_lock<std::mutex> lock(mtx);
