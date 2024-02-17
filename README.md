@@ -1,10 +1,3 @@
 # LearnCplusplus
-学习C++的内容
-neovim test
-nvim测试成功
-微软云主机 测试成功
-在 macOS上测试成功
-MAC MINI
-基本数据结构与算法
-cmake
-多线程
+hundaozi 学习C++的内容
+
