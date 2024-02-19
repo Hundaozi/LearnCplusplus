@@ -1,7 +1,18 @@
-//:string将person参数注解为string型
-function greeter(person:string){
-    return "hello, " + person
+class Student {
+    fullName: string;
+    constructor(public firstName, public middleInitial, public lastName) {
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
 }
 
-let myuser = "yonghua li";
-document.body.innerHTML=greeter(myuser);
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+//类型注解
+function greeter(person:Person){
+    return "hello, " + person.firstName+ " "+person.lastName;
+}
+
+let user = new Student("Li","h","yonghua");//实例化一个类
+document.body.innerHTML=greeter(user);
