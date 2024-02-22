@@ -31,3 +31,6 @@ class C{
 let c=new C();//创建一个实例
 let className=c[getClassNameSymbol]();
 //有点多此一举的感觉，可能我还没有领悟其妙用
+
+
+//哦哦，懂了符号类型用作符号，就是个符号而已。又是一个节省代码量的语法糖
