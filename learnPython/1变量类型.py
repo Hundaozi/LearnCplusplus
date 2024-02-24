@@ -57,11 +57,46 @@ print (tuple + tinytuple)   # 打印组合的元组
 
 #列表是有序的对象集合，字典是无序的对象集合。
 '''哈希表？'''
-
+'''
 tinydict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
  
 print ("tinydict['Name']: ", tinydict['Name'])
 print ("tinydict['Age']: ", tinydict['Age'])
+
+'''
+
 '''
 就是键值对
 '''
+
+
+
+'''
+Python 中的集合（Set）是一种无序、可变的数据类型，用于存储唯一的元素。
+
+集合中的元素不会重复，并且可以进行交集、并集、差集等常见的集合操作。
+
+在 Python 中，集合使用大括号 {} 表示，元素之间用逗号 , 分隔。
+
+另外，也可以使用 set() 函数创建集合。
+
+注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。
+'''
+
+
+'''
+sites = {'Google', 'Taobao', 'Runoob', 'Facebook', 'Zhihu', 'Baidu'}
+
+print(sites)   # 输出集合，重复的元素被自动去掉:q
+
+if 'Google' in sites:
+    print("google存在")
+'''
+
+a = set("hello myfriend")
+b=set("fuck you!")
+print(a)
+print(b)
+
+print(a-b) #差集
+print(a|b) #并集
