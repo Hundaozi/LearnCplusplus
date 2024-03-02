@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/liyonghua/github/LearnCplusplus/learnTCP/服务器开发/1/server"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DAC, symSize: 0x144 }
+  - { offsetInCU: 0x7B, offset: 0x7B, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DAC, symSize: 0x144 }
+  - { offsetInCU: 0xDB, offset: 0xDB, size: 0x8, addend: 0x0, symName: __ZL12_OSSwapInt16t, symObjAddr: 0x144, symBinAddr: 0x100003EF0, symSize: 0x24 }
+...
