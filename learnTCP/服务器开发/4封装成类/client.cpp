@@ -51,7 +51,7 @@ int main(){
             printf("server socket disconnected!\n");
             break;
 
-        }else if (read_bytes==-1)
+        }else if (read_bytes == -1)
         {
             /* code */
             //读取出错，断开连接
