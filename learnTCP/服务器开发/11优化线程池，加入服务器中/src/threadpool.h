@@ -42,7 +42,7 @@ add(F&& f, Args&&... args){
             std::forward<F>(f),
             std::forward<Args>(args)...)
     )
-
+    //std::future类模板来关联线程运行的函数和函数的返回结果，这种获取结果的方式是异步的。
     std::future<return_type> res=task->get_future();
     {
         std::unique_lock<std::mutex> lock(tasks_mtx);
