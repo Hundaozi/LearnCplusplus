@@ -29,7 +29,9 @@ public:
 };
 //不能放在cpp文件，原因是C++编译器不支持模版的分离编译
 template<class F, class... Args>
-decltype(auto) add(F&& f, Args&&... args){
+decltype(auto) 
+add(F&& f, Args&&... args){
+    //获取函数返回值的类型
     using return_type= typename std::result_of_t<F(Args...)>::type;
     //packaged_task：将一个普通的可调用函数对象转换为异步执行的任务
     auto task=std::make_shared<std::packaged_task<return_type>> (
