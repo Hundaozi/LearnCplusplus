@@ -36,7 +36,7 @@ std::vector<Channel*> Epoll::poll(int _timeout){
 }
 
 void Epoll::updateChannel(Channel *_channel){
-    int fd = _channel->getFd();
+    auto fd = _channel->getFd();
     struct epoll_event ev;
     bzero(&ev, sizeof(ev));
     ev.data.ptr = _channel;
@@ -47,4 +47,10 @@ void Epoll::updateChannel(Channel *_channel){
     } else{
         error(epoll_ctl(epoll_fd, EPOLL_CTL_MOD, fd, &ev) == -1, "epoll modify 错误！\n");
     }
+}
+
+void Epoll::deleteChannel(Channel *_channel){
+    auto fd =_channel->getFd();
+    error(epoll_ctl(epoll_fd, EPOLL_CTL_DEL, fd, NULL) == -1, "epoll delete error");
+    _channel->setInEpoll(false);
 }

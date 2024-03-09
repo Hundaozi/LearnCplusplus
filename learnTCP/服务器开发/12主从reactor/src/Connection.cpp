@@ -16,7 +16,7 @@ Connection::Connection(EventLoop *_loop, Socket *_sock) :
         //将两个地址，一个fd绑定在一起
         std::function<void()> cb = std::bind(&Connection::echo , this , sock->get_socket_fd());
         channel->set_Read_Callback(cb);
-        channel->set_Use_ThreadPool(true);
+        //channel->set_Use_ThreadPool(true);
         readBuffer=new Buffer();
 }
 //断开连接

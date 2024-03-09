@@ -54,7 +54,6 @@ int Socket::get_socket_fd(){
 
 
 void Socket::connect(InetAddress* _addr){
-    struct sockaddr_in addr=_addr->getAddr();
-    socklen_t addr_len=_addr->getAddr_len();
-    error(::connect(socket_fd,(sockaddr*)&addr, addr_len)==-1,"socket connect 错误！\n");
+    struct sockaddr_in addr = _addr->getAddr();
+    error(::connect(socket_fd, (sockaddr*)&addr, sizeof(addr)) == -1, "socket connect error");
 }
