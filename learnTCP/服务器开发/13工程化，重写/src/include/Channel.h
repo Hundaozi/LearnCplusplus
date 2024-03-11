@@ -35,9 +35,9 @@ class Channel {
     private:
         EventLoop *loop_;
         int fd_;
-        uint32_t listen_events_;
-        uint32_t ready_events_;
-        bool in_epoll_;
+        uint32_t listen_events_;//监听中的事件数量
+        uint32_t ready_events_;//已就绪的事件数量
+        bool in_epoll_;//是否在epoll红黑树中
         //读取回调函数
         std::function<void()> read_callback_;
         //写入回调函数
