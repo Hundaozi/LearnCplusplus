@@ -1,0 +1,1 @@
+/usr/bin/clang++   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes   -fPIC CMakeFiles/multiple_client.dir/multiple_client.cpp.o  -o ../bin/multiple_client  -Wl,-rpath,/root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/lib ../lib/libpine_shared.so 
