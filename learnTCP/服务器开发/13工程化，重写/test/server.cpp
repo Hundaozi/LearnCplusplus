@@ -1,6 +1,5 @@
-//Copyright [2014] <Copyright Owner>
+// Copyright [2014] <Copyright Owner>
 #include "src/include/Server.h"
-
 #include "src/include/EventLoop.h"
 
 int main() {

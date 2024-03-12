@@ -1,9 +1,8 @@
+// Copyright [2014] <Copyright Owner>
 #include <cstring>
 #include <unistd.h>
-
 #include <functional>
 #include <iostream>
-
 #include "src/include/Buffer.h"
 #include "src/include/Socket.h"
 #include "src/include/ThreadPool.h"

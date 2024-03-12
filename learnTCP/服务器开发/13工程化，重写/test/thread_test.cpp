@@ -1,6 +1,6 @@
+// Copyright [2014] <Copyright Owner>
 #include <iostream>
 #include <string>
-
 #include "src/include/ThreadPool.h"
 
 void Print(int a, double b, const char *c, std::string const &d) {

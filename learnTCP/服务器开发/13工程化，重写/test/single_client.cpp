@@ -1,6 +1,6 @@
+// Copyright [2014] <Copyright Owner>
 #include <cstring>
 #include <unistd.h>
-
 #include <iostream>
 #include "src/include/Buffer.h"
 #include "src/include/Socket.h"
