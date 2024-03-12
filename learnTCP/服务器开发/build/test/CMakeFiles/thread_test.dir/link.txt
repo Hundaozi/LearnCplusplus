@@ -1,0 +1,1 @@
+/usr/bin/clang++   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls   -fPIC CMakeFiles/thread_test.dir/thread_test.cpp.o  -o ../bin/thread_test  -Wl,-rpath,/root/github/LearnCplusplus/learnTCP/服务器开发/build/lib ../lib/libpine_shared.so 

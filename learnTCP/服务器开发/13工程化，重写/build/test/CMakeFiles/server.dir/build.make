@@ -60,15 +60,15 @@ include test/CMakeFiles/server.dir/flags.make
 test/CMakeFiles/server.dir/server.cpp.o: test/CMakeFiles/server.dir/flags.make
 test/CMakeFiles/server.dir/server.cpp.o: ../test/server.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/server.dir/server.cpp.o"
-	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/server.cpp.o -c /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/server.cpp
+	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/server.cpp.o -c /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/server.cpp
 
 test/CMakeFiles/server.dir/server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/server.cpp.i"
-	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/server.cpp > CMakeFiles/server.dir/server.cpp.i
+	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/server.cpp > CMakeFiles/server.dir/server.cpp.i
 
 test/CMakeFiles/server.dir/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/server.cpp.s"
-	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/server.cpp -o CMakeFiles/server.dir/server.cpp.s
+	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/server.cpp -o CMakeFiles/server.dir/server.cpp.s
 
 # Object files for target server
 server_OBJECTS = \

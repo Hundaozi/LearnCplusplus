@@ -60,15 +60,15 @@ include test/CMakeFiles/thread_test.dir/flags.make
 test/CMakeFiles/thread_test.dir/thread_test.cpp.o: test/CMakeFiles/thread_test.dir/flags.make
 test/CMakeFiles/thread_test.dir/thread_test.cpp.o: ../test/thread_test.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/thread_test.dir/thread_test.cpp.o"
-	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/thread_test.dir/thread_test.cpp.o -c /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/thread_test.cpp
+	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/thread_test.dir/thread_test.cpp.o -c /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/thread_test.cpp
 
 test/CMakeFiles/thread_test.dir/thread_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/thread_test.dir/thread_test.cpp.i"
-	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/thread_test.cpp > CMakeFiles/thread_test.dir/thread_test.cpp.i
+	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/thread_test.cpp > CMakeFiles/thread_test.dir/thread_test.cpp.i
 
 test/CMakeFiles/thread_test.dir/thread_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/thread_test.dir/thread_test.cpp.s"
-	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/thread_test.cpp -o CMakeFiles/thread_test.dir/thread_test.cpp.s
+	cd /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/test/thread_test.cpp -o CMakeFiles/thread_test.dir/thread_test.cpp.s
 
 # Object files for target thread_test
 thread_test_OBJECTS = \

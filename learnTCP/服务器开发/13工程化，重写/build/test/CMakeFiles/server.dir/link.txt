@@ -1,1 +1,1 @@
-/usr/bin/clang++   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes   -fPIC CMakeFiles/server.dir/server.cpp.o  -o ../bin/server  -Wl,-rpath,/root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/lib ../lib/libpine_shared.so 
+/usr/bin/c++   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes   -fPIC CMakeFiles/server.dir/server.cpp.o  -o ../bin/server  -Wl,-rpath,/root/github/LearnCplusplus/learnTCP/服务器开发/13工程化，重写/build/lib ../lib/libpine_shared.so 

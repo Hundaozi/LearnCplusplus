@@ -1,22 +1,34 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(BUILD_SHARED_LIBS ON)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+project(Pine
+        VERSION 0.1
+        DESCRIPTION "pine"
+        LANGUAGES C CXX
+)
 file(GLOB PINE_TEST_SOURCES "${PROJECT_SOURCE_DIR}/test/*.cpp")
-######################################################################################################################
+
+# #####################################################################################################################
 # DEPENDENCIES
-######################################################################################################################
+# #####################################################################################################################
 
-######################################################################################################################
+# #####################################################################################################################
 # MAKE TARGETS
-######################################################################################################################
+# #####################################################################################################################
 
-##########################################
+# #########################################
 # "make check-tests"
-##########################################
+# #########################################
 add_custom_target(build-tests COMMAND ${CMAKE_CTEST_COMMAND} --show-only)
 add_custom_target(check-tests COMMAND ${CMAKE_CTEST_COMMAND} --verbose)
 
-##########################################
+# #########################################
 # "make server client ..."
-##########################################
-foreach (pine_test_source ${PINE_TEST_SOURCES})
+# #########################################
+foreach(pine_test_source ${PINE_TEST_SOURCES})
     # Create a human readable name.
     get_filename_component(pine_test_filename ${pine_test_source} NAME)
     string(REPLACE ".cpp" "" pine_test_name ${pine_test_filename})
@@ -34,5 +46,4 @@ foreach (pine_test_source ${PINE_TEST_SOURCES})
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
         COMMAND ${pine_test_name}
     )
-
 endforeach(pine_test_source ${PINE_TEST_SOURCES})

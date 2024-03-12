@@ -1,10 +1,10 @@
 // Copyright [2014] <Copyright Owner>
-#include <cstring>
-#include <unistd.h>
-#include <iostream>
 #include "src/include/Buffer.h"
 #include "src/include/Socket.h"
 #include "src/include/util.h"
+#include <cstring>
+#include <iostream>
+#include <unistd.h>
 
 int main() {
   Socket *sock = new Socket();

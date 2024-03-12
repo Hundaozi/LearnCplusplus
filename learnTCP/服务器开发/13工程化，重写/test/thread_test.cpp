@@ -1,7 +1,7 @@
 // Copyright [2014] <Copyright Owner>
+#include "src/include/ThreadPool.h"
 #include <iostream>
 #include <string>
-#include "src/include/ThreadPool.h"
 
 void Print(int a, double b, const char *c, std::string const &d) {
   std::cout << a << b << c << d << std::endl;
