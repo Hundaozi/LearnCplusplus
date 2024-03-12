@@ -1,6 +1,6 @@
-// Copyright [2014] <Copyright Owner>
-#include "src/include/Server.h"
-#include "src/include/EventLoop.h"
+#include "Server.h"
+
+#include "EventLoop.h"
 
 int main() {
   EventLoop *loop = new EventLoop();
