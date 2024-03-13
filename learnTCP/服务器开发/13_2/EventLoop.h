@@ -10,7 +10,7 @@ public:
   EventLoop();
   ~EventLoop();
 
-  DISALLOW_COPY_AND_MOVE(EventLoop);
+  //DISALLOW_COPY_AND_MOVE(EventLoop);
   //循环
   void Loop();
   //更新管道

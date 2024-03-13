@@ -1,5 +1,4 @@
 #include "Server.h"
-
 #include "EventLoop.h"
 
 int main() {

@@ -20,7 +20,7 @@ public:
   explicit Server(EventLoop *loop);
   ~Server();
 
-  DISALLOW_COPY_AND_MOVE(Server);
+  //DISALLOW_COPY_AND_MOVE(Server);
   //建立新的TCP连接
   void NewConnection(Socket *sock);
   //删除TCP连接
