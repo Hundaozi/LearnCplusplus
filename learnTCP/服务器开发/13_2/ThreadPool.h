@@ -12,13 +12,11 @@
 class ThreadPool {
 public:
   //阻止隐式转换
-  explicit ThreadPool(
-      unsigned int size = std::thread::
-          hardware_concurrency()); //这个函数会返回能并发在一个程序中的线程数量。
+  explicit ThreadPool(unsigned int size = std::thread::hardware_concurrency()); //这个函数会返回能并发在一个程序中的线程数量。
   ~ThreadPool();
 
   //不允许复制也不允许移动
-  DISALLOW_COPY_AND_MOVE(ThreadPool);
+  //DISALLOW_COPY_AND_MOVE(ThreadPool);
   template <class F, class... Args>
   auto Add(F &&f, Args &&... args)
       -> std::future<typename std::result_of<F(Args...)>::type>;
