@@ -1,4 +1,0 @@
-neovim lazyvim
-
-ubuntu 在ubuntu下配置自动化LSP成功
-
