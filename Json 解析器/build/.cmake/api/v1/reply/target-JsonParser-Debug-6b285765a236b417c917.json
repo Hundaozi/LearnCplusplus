@@ -11,7 +11,6 @@
 		"commands" : 
 		[
 			"add_executable",
-			"add_compile_options",
 			"include_directories"
 		],
 		"files" : 
@@ -32,12 +31,6 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 8,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
 				"line" : 13,
 				"parent" : 0
 			}
@@ -52,22 +45,13 @@
 					"fragment" : "-g  "
 				},
 				{
-					"backtrace" : 2,
-					"fragment" : "-Wall"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-g"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-std=c++17"
+					"fragment" : "-std=gnu++17"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 2,
 					"path" : "/root/github/LearnCplusplus/Json 解析器/include"
 				}
 			],

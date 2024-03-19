@@ -4,8 +4,8 @@ project(JsonParser
         LANGUAGES C CXX
         DESCRIPTION "一个普通的JSON解析器")
 
-# 指定C++版本
-add_compile_options(-Wall -g -std=c++17)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # 指定需要的头文件目录
 # 设置头文件变量到项目中

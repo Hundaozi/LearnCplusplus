@@ -1,7 +1,7 @@
 [
 {
   "directory": "/root/github/LearnCplusplus/Json 解析器/build",
-  "command": "/usr/bin/clang++   -I../include  -g   -Wall -g -std=c++17 -o CMakeFiles/JsonParser.dir/src/main.cpp.o -c \"/root/github/LearnCplusplus/Json 解析器/src/main.cpp\"",
+  "command": "/usr/bin/clang++   -I../include  -g   -std=gnu++17 -o CMakeFiles/JsonParser.dir/src/main.cpp.o -c \"/root/github/LearnCplusplus/Json 解析器/src/main.cpp\"",
   "file": "/root/github/LearnCplusplus/Json 解析器/src/main.cpp"
 }
 ]

@@ -328,6 +328,12 @@ SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
 //Path to a program.
 SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
 
+//Value Computed by CMake
+json_parser_BINARY_DIR:STATIC=/root/github/LearnCplusplus/Json 解析器/build
+
+//Value Computed by CMake
+json_parser_SOURCE_DIR:STATIC=/root/github/LearnCplusplus/Json 解析器
+
 
 ########################
 # INTERNAL cache entries
