@@ -1,7 +1,6 @@
 #include<iostream>
 
 class Hello{
-    public:
+public:
     void say_hello();
-
 };
