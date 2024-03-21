@@ -1,8 +1,8 @@
 [
 {
   "directory": "/root/github/LearnCplusplus/Json/build",
-  "command": "/usr/bin/g++ -g -o CMakeFiles/Json.dir/main.cpp.o -c /root/github/LearnCplusplus/Json/main.cpp",
-  "file": "/root/github/LearnCplusplus/Json/main.cpp",
-  "output": "CMakeFiles/Json.dir/main.cpp.o"
+  "command": "/usr/bin/g++ -I/root/github/LearnCplusplus/Json/include -g -std=gnu++17 -o CMakeFiles/Json.dir/src/main.cpp.o -c /root/github/LearnCplusplus/Json/src/main.cpp",
+  "file": "/root/github/LearnCplusplus/Json/src/main.cpp",
+  "output": "CMakeFiles/Json.dir/src/main.cpp.o"
 }
 ]

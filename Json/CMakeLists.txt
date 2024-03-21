@@ -1,18 +1,19 @@
 cmake_minimum_required(VERSION 3.28.3)
-project(Json VERSION 0.1.0 LANGUAGES C CXX)
+project(Json)
 
-include(CTest)
-enable_testing()
 
-file(GLOB SRC_FILES
-    "{PROJECT_SOURCE_DIR}/include/*.h"
-    "{PROJECT_SOURCE_DIR}/src/*.cpp"
-)
-
-add_executable(${CMAKEZ_PROJECT_NAME} ${SRC_FILES})
-
-#指定编译器
-target_compile_features(${CMAKE_PROJECT_NAME} PRIVATE cxx_std_17)
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
+set(CMAKE_CXX_STANDARD 17)
+
+# 头文件导入
+include_directories(${PROJECT_SOURCE_DIR}/include)
+# 设置可执行文件输出目录
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+# 源文件导入
+aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
+
+add_executable(
+    Json 
+    ${SRC_LIST}
+)
