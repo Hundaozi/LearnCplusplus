@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20240321-0300-Experimental"
+	Name="yisu-65e592c0e4ccb"
+	Generator="ctest-3.28.3"
+	CompilerName="/usr/bin/g++"
+	CompilerVersion="9.4.0"
+	OSName="Linux"
+	Hostname="yisu-65e592c0e4ccb"
+	OSRelease="5.4.0-58-generic"
+	OSVersion="#64-Ubuntu SMP Wed Dec 9 08:16:25 UTC 2020"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="85"
+	ProcessorCacheSize="16384"
+	NumberOfLogicalCPU="2"
+	NumberOfPhysicalCPU="1"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="1946"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2494.14"
+	>
+	<Testing>
+		<StartDateTime>Mar 21 08:31 UTC</StartDateTime>
+		<StartTestTime>1711009913</StartTestTime>
+		<TestList/>
+		<EndDateTime>Mar 21 08:31 UTC</EndDateTime>
+		<EndTestTime>1711009913</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
