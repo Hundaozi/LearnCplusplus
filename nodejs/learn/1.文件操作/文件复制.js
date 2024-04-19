@@ -3,8 +3,8 @@
 const fs=require('fs');
 const process=require('process');
 
-const rs=fs.createReadStream('./data.txt');
+const rs=fs.createReadStream('./test.txt');
 //每次只取64kb的数据为一块
-const ws=fs.createWriteStream('./data1111.txt',rs);
+const ws=fs.createWriteStream('./test1111.txt',rs);
 
 console.log(process.memoryUsage());
