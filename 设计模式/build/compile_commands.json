@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/liyonghua/github/LearnCplusplus/设计模式/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -o CMakeFiles/Designpattern.dir/观察者模式.cpp.o -c /Users/liyonghua/github/LearnCplusplus/设计模式/观察者模式.cpp",
+  "file": "/Users/liyonghua/github/LearnCplusplus/设计模式/观察者模式.cpp",
+  "output": "CMakeFiles/Designpattern.dir/观察者模式.cpp.o"
+}
+]
