@@ -5,7 +5,7 @@ const server=http.createServer((request,response)=>{
     response.end('Http Server......启动中'); //设置响应体
 });
 
-//监听,比纯 C++简单太多，真是纯牛马
+//监听
 server.listen(9000,()=>{
     console.log('你好！')
 });
