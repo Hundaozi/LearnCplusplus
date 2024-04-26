@@ -1,6 +1,18 @@
 const http=require('http');
 const fs=require('fs');
-
+const path = require('node:path/posix');
+const { MIMEParams } = require('util');
+let mimes={
+    html:'text/html',
+    css:'text/css',
+    js:'text/javascript',
+    png:'image/png',
+    jpg:'image/jpg',
+    gif:'image/gif',
+    mp4:'video/mp4',
+    mp3:'audio/mpeg',
+    json:'application/json'
+}
 const server=http.createServer((request,response)=>{
     //获取请求url的路径
     let {pathname}=new URL(request.url,'http://127.0.0.1');
@@ -19,6 +31,22 @@ const server=http.createServer((request,response)=>{
             console.log('读取错误');
             return ;
         }
+        //获取文件的后缀名
+        let ext=path.extname(filePath).slice(1);
+        //console.log(ext);
+        //获取对应的类型
+        let type=mimes[ext];
+        if (type) {
+            //匹配到了类型
+            response.setHeader('content-type',type);
+            
+        }else{
+            //配有匹配到我们预设的类型
+            response.setHeader('content-type','application/octet-stream');
+            //即下载文件类型
+        }
+
+        //response.setHeader('conten-type','xxx');
         //响应文件内容
         response.end(data);
     });
