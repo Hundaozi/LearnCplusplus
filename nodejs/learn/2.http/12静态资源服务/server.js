@@ -14,6 +14,12 @@ let mimes={
     json:'application/json'
 }
 const server=http.createServer((request,response)=>{
+
+    if(request.method !=='GET'){
+        response.statusCode=405;
+        response.end('<h1>405 not Fuound!</h1>');
+        return ;
+    }
     //获取请求url的路径
     let {pathname}=new URL(request.url,'http://127.0.0.1');
 
@@ -25,9 +31,24 @@ const server=http.createServer((request,response)=>{
     //读取文件，fs 异步api
     fs.readFile(filePath,(err,data)=>{
         if(err){
+            //设置字符标准
             response.setHeader('content-type','text/html;charset=utf-8');
-            response.statusCode = 500;
-            response.end('文件读取失败...');
+            //判断错误代号
+            switch (err.code) {
+                case 'ENOENT':
+                    response.statusCode=404;
+                    response.end('<h1>404 Not Found!</h1>');
+                return ;
+                case 'EPERM':
+                    response.statusCode=403;
+                    response.end('<h1>403 Forbidden</h1>');
+                default:
+                    response.statusCode=500;
+                    response.end('<h1>服务器内部错误</h1>');
+            }
+            
+            // response.statusCode = 500;
+            // response.end('文件读取失败...');
             console.log('读取错误');
             return ;
         }
