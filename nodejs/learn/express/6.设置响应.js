@@ -3,7 +3,9 @@ const express=require('express');
 const app=express();
 const port=9000;
 
-
+app.get('/',(req,res)=>{
+    req.end('重定向成功');
+});
 
 
 app.get('/home',(req,res)=>{
@@ -18,9 +20,15 @@ app.get('/home',(req,res)=>{
     res.set('aaa','bbb');
     res.send('hello gagagagag\n');
 
+    
+
 
     res.end('hello express');
 });
+app.get('/other',(req,res)=>{
+    //跳转响应
+    res.redirect('http://127.0.0.1');
+})
 
 
 app.listen(port,()=>{
