@@ -29,7 +29,7 @@ app.get('/admin',checkCodeMiddleware,(req,res)=>{
 
 app.get('/setting',checkCodeMiddleware,(req,res)=>{
     res.send('设置页面');
-});
+}); 
 
 app.all('*',(req,res)=>{
     res.send('<h1>404</h1>');
