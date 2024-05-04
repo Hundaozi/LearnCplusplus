@@ -3,6 +3,9 @@ const express=require('express');
 const app=express();
 const port=9000;
 
+app.get('/',(req,res)=>{
+    res.send('首页....');
+});
 
 //静态资源中间件设置
 //这个参数是静态资源文件夹的路径
