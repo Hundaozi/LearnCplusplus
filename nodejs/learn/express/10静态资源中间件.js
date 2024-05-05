@@ -11,6 +11,28 @@ app.get('/',(req,res)=>{
 //这个参数是静态资源文件夹的路径
 app.use(express.static(__dirname+ '/public'));//一行代码就搞定了，舒服
 
+//
+app.use((req,res,next)=>{
+    //防止盗链,如果不是指定的地址，就无法获取资源
+    //获取referer
+    let referer=req.get('referer');
+
+    if (referer) {
+        let url=new URL(referer);
+        //获取hostname
+        let hostname=url.hostname;
+        console.log(hostname);
+        if (hostname!=='127.0.0.1') {
+            //响应404
+            res.status(404).send('<h1>404 not found</h1>');
+            return ;
+        }
+    }
+    // console.log(referer);
+    
+    next();
+});
+
 
 app.get('/home',(req,res)=>{
 
