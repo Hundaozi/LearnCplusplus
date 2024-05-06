@@ -21,7 +21,7 @@ app.use((req,res,next)=>{
         let url=new URL(referer);
         //获取hostname
         let hostname=url.hostname;
-        console.log(hostname);
+        //console.log(hostname);
         if (hostname!=='127.0.0.1') {
             //响应404
             res.status(404).send('<h1>404 not found</h1>');
