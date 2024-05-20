@@ -1,6 +1,13 @@
 {
   "accounts": [
     {
+      "id": "yM3yYcCLd",
+      "title": "收入测试",
+      "time": "2024-05-20",
+      "type": "1",
+      "remarks": "q "
+    },
+    {
       "id": "trS7UpYsC",
       "title": "342",
       "time": "2024-05-19",
@@ -16,27 +23,6 @@
     },
     {
       "id": "bYDQEG0b3",
-      "title": "第二个测试",
-      "time": "2024-05-19",
-      "type": "-1",
-      "remarks": "这个带shortid"
-    },
-    {
-      "id": "yPspQSrjS",
-      "title": "第二个测试",
-      "time": "2024-05-19",
-      "type": "-1",
-      "remarks": "这个带shortid"
-    },
-    {
-      "id": "xrTqqQzJv",
-      "title": "第二个测试",
-      "time": "2024-05-19",
-      "type": "-1",
-      "remarks": "这个带shortid"
-    },
-    {
-      "id": "aDpzXPXW1",
       "title": "第二个测试",
       "time": "2024-05-19",
       "type": "-1",
